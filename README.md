@@ -4,7 +4,7 @@
 React 18 + TypeScript + Material UI 5 + MUI X DataGrid + Dark/Light Mode + 完全響應式
 
 ## 🚀 Live Demo（無需登入，直接進入）
-https://enterprise-admin-dashboard.vercel.app
+[https://enterprise-admin-dashboard.vercel.app](https://enterprise-admin-dashboard-17tt-iftwhcrni-yu-xin-chens-projects.vercel.app/)
 
 ## 🖥 主要功能
 - 完整響應式側邊欄與頂欄布局
