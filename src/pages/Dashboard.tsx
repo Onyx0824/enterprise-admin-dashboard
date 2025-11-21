@@ -18,7 +18,14 @@ export default function Dashboard() {
 
       <Grid container spacing={3}>
         {stats.map((stat) => (
-          <Grid size={{ xs: 12, sm: 6, md: 3 }} key={stat.title}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={3}
+            key={stat.title}
+            component={Box} // 關鍵：明確指定 component 為 Box，避免 overload 判斷失敗
+          >
             <Card>
               <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
                 {stat.icon}
