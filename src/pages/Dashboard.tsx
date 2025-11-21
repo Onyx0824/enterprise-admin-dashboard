@@ -24,7 +24,8 @@ export default function Dashboard() {
             sm={6}
             md={3}
             key={stat.title}
-            component={Box} // 關鍵：明確指定 component 為 Box，避免 overload 判斷失敗
+            // 關鍵：明確指定 component 為 "div"，徹底避開所有 overload 問題
+            component="div"
           >
             <Card>
               <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
