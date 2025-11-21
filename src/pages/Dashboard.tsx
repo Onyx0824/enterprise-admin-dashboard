@@ -19,13 +19,11 @@ export default function Dashboard() {
       <Grid container spacing={3}>
         {stats.map((stat) => (
           <Grid
-            item
+            key={stat.title}
             xs={12}
             sm={6}
             md={3}
-            key={stat.title}
-            // 關鍵：明確指定 component 為 "div"，徹底避開所有 overload 問題
-            component="div"
+            // 完全不使用 item 屬性 + 不使用 component 屬性
           >
             <Card>
               <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
