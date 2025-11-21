@@ -23,7 +23,6 @@ https://enterprise-admin-dashboard.vercel.app
 - Vercel 一鍵部署
 
 ## 📸 預覽截圖
-（建議您自行截圖上傳到 repo 的 screenshots 資料夾後替換連結）
 
 ![Dashboard Dark Mode](screenshots/dashboard-dark.png)
 ![Users Management](screenshots/users.png)
