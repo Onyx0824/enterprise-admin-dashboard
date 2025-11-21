@@ -1,5 +1,5 @@
 // src/pages/Dashboard.tsx
-import { Box, Typography, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Card, CardContent } from '@mui/material';
 import { People, Inventory, ShoppingCart, TrendingUp } from '@mui/icons-material';
 
 export default function Dashboard() {
@@ -16,14 +16,21 @@ export default function Dashboard() {
         歡迎回到 Onyx 企業後台 ✨
       </Typography>
 
-      <Grid container spacing={3}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: 3,
+          margin: -1.5, // 抵消子 Box 的 padding
+        }}
+      >
         {stats.map((stat) => (
-          <Grid
+          <Box
             key={stat.title}
-            xs={12}
-            sm={6}
-            md={3}
-            // 完全不使用 item 屬性 + 不使用 component 屬性
+            sx={{
+              flex: { xs: '1 1 100%', sm: '1 1 calc(50% - 24px)', md: '1 1 calc(25% - 24px)' },
+              minWidth: 250,
+            }}
           >
             <Card>
               <CardContent sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
@@ -38,9 +45,9 @@ export default function Dashboard() {
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Box>
   );
 }
